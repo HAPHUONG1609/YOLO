@@ -4,9 +4,9 @@ function DetectionResults({ detections, error }) {
     }
   
     return (
-      <div className="text-sm text-gray-700">
+      <div className="flex flex-col justify-center items-center text-sm text-gray-700">
         {detections.map((detection, index) => (
-          <p key={index}>
+          <p className="text-center" key={index}>
             Class: {detection.class}, Confidence: {(detection.confidence * 100).toFixed(2)}%, BBox: [
             {detection.bbox.join(', ')}]
           </p>
